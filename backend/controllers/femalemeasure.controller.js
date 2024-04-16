@@ -20,4 +20,14 @@ const createFemaleMeasurements = async(req,res) =>{
  
  }
 
-module.exports = {createFemaleMeasurements};
+ const getAllFemaleMeasurements =async(req,res)=>{
+    try {
+        const AllFemaleMeasurements = await Female.find();
+        res.json(AllFemaleMeasurements)
+    } catch (error) {
+        res.status(400).json(error)
+    }
+}
+
+
+module.exports = {createFemaleMeasurements,getAllFemaleMeasurements};
