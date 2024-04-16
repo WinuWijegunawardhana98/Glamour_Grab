@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    .navbar {
+      background-color: #007bff; /* Blue background */
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #1b1a1a !important; /* White text color */
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+      color: #23b6db !important; /* Light gray text color on hover */
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #8baee2; /* Light gray background */
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+      margin-right: 0;
+    }
+
+    .social-icons a {
+      color: #007bff; /* Blue social icon color */
+      font-size: 20px;
+    }
+
+    .social-icons a:hover {
+      color: #0056b3; /* Darker blue on hover */
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <!-- Add your additional items here -->
+  </div>
+</nav>
+
+<footer>
+  <ul class="social-icons">
+    <li><a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
+    <!-- Add more social media links here -->
+  </ul>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
