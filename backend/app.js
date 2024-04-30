@@ -7,6 +7,7 @@ const bodyParser= require("body-parser");
 const dotenv =require("dotenv").config();
 const dbConnect = require("./config/dbConnect");
 const femaleMeasurementRoute = require("./routes/femalemeasure.route");
+const male = require("./models/male.model");
 
 
 //app
@@ -23,6 +24,7 @@ dbConnect();
 app.use(bodyParser.json());
 app.use (morgan("dev"));
 app.use(cors({origin:true, credentials:true}));
+app.use(express.json());
 
 
 //routes
@@ -30,6 +32,7 @@ app.use(cors({origin:true, credentials:true}));
 // const testRoutes =require("./routes/test");
 // app.use("/", testRoutes);
 app.use("/api/female/measurement",femaleMeasurementRoute);
+app.use("/api/male/measurement",maleMeasurementRoute);
 
 
 
