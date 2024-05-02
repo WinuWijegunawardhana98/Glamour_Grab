@@ -7,7 +7,8 @@ const bodyParser= require("body-parser");
 const dotenv =require("dotenv").config();
 const dbConnect = require("./config/dbConnect");
 const male = require("./models/male.model");
-const FittingRoute = require("./routes/routes");
+const FittingRoute = require("./routes/routes")
+;
 //app
 const app=express();
 
