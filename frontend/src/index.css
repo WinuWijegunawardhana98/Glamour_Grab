@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: auto;
 }
 body {
@@ -13,4 +13,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+/* Add this CSS to your main stylesheet or component styles */
+
+.MeasurementForm {
+  margin-top: 20px; /* Add margin to create space between the header and form */
+}
+
+.ModelDisplay {
+  margin-top: 20px; /* Add margin to create space between the form and model preview */
 }
