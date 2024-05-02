@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const femaleSchema = new mongoose.Schema({
+const maleSchema = new mongoose.Schema({
     measurements:{
         type:[String],
         required:true
@@ -20,19 +20,20 @@ const femaleSchema = new mongoose.Schema({
     timestamps:true,
 });
 
-const Female = mongoose.model('Female', femaleSchema);
+const male = mongoose.model('male', maleSchema);
 
-module.exports = Female;
+module.exports = male;
 
 const basicMeasurements = [
-    'Bust',
-    'Waist',
+    'color Size',
     'Hips',
-    'Inseam',
+    'height',
+    'Chest',
+
     // Add more measurements as needed
 ];
 
-femaleInstance.save()
+maleInstance.save()
     .then(doc => {
         console.log(doc);
     })
