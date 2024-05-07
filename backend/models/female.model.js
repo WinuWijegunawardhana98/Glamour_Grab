@@ -24,18 +24,19 @@ const Female = mongoose.model('Female', femaleSchema);
 
 module.exports = Female;
 
-const basicMeasurements = [
-    'Bust',
-    'Waist',
-    'Hips',
-    'Inseam',
-    // Add more measurements as needed
-];
+// const basicMeasurements = [
+//     'Bust',
+//     'Waist',
+//     'Hips',
+//     'Inseam',
+//     'ArmLength',
+//     // Add more measurements as needed
+// ];
 
-femaleInstance.save()
-    .then(doc => {
-        console.log(doc);
-    })
-    .catch(err => {
-        console.error(err);
-    });
+// femaleInstance.save()
+//     .then(doc => {
+//         console.log(doc);
+//     })
+//     .catch(err => {
+//         console.error(err);
+//     });

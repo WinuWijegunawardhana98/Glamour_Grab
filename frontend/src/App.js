@@ -1,37 +1,32 @@
-import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import MeasurementForm from './components/MeasurementForm';
-import ModelDisplay from './components/ModelDisplay';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+//import { Switch } from 'react-router-dom'
+import Header from './pages/Header';
+import Footer from './pages/Footer';
+import Home from './pages/Header'
+import About from './pages/Header';
+import Contact from './pages/Header';
+import Products from './pages/Header';
+import BuyNow from './pages/Header';
+import NotFound from './pages/Header'; 
 
- function App() {
-  const [modelMeasurements, setModelMeasurements] = useState(null);
-
-  const handleFormSubmit = (values) => {
-    // Here you can update the model's measurements or trigger any backend logic
-    setModelMeasurements(values);
-  };
-
+function App() {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <h1>Virtual Dressing Room</h1>
-          <MeasurementForm onSubmit={handleFormSubmit} />
-        </Col>
-        <Col>
-          <h2>Model Preview</h2>
-          {modelMeasurements && <ModelDisplay measurements={modelMeasurements} />}
-        </Col>
-      </Row>
-    </Container>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/products" component={Products} />
+        <Route path="/buy-now" component={BuyNow} />
+        <Route component={NotFound} /> {/* Catch-all route for 404 */}
+      </Switch>
+
+      
+      <Footer /> {/* Include Footer component here */}
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
-
- 
-
-
