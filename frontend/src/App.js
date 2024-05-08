@@ -9,8 +9,28 @@ import Contact from './pages/Header';
 import Products from './pages/Header';
 import BuyNow from './pages/Header';
 import NotFound from './pages/Header'; 
+import ModelForm from './pages/Model'
+import { LoadGLTFByPath } from './helpers/ModelHelper'; 
 
 function App() {
+
+
+  function App() {
+   
+    const handleSubmit = (formData) => {
+     
+      console.log('Form data:', formData);
+      
+      LoadGLTFByPath(scene, formData)
+        .then(() => {
+          console.log('GLTF model loaded with dimensions:', formData);
+        })
+        .catch((error) => {
+          console.error('Error loading GLTF model:', error);
+        });
+    };
+
+
   return (
     <BrowserRouter>
       <Header />
@@ -19,7 +39,12 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/products" component={Products} />
+        <div>
+            <h1>Model Details Form</h1>
+            <ModelForm onSubmit={handleSubmit} />
+        </div>
         <Route path="/buy-now" component={BuyNow} />
+        
         <Route component={NotFound} /> {/* Catch-all route for 404 */}
       </Switch>
 
@@ -28,5 +53,7 @@ function App() {
     </BrowserRouter>
   );
 }
+}
+
 
 export default App;
