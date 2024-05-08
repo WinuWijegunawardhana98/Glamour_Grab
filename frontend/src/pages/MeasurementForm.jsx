@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button } from 'react-bootstrap';
 
-const MeasurementForm = ({ onSubmit }) => {
+
+const MesurementForm = ({ onSubmit }) => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [chest, setChest] = useState('');
@@ -43,5 +44,5 @@ const MeasurementForm = ({ onSubmit }) => {
   );
 };
 
-export default MeasurementForm;
+export default MesurementForm;
 

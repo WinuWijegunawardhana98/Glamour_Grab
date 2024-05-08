@@ -1,3 +1,4 @@
+import ModelForm from '../../frontend/src/pages/MeasurementForm';
 const mongoose = require('mongoose');
 
 const femaleSchema = new mongoose.Schema({
