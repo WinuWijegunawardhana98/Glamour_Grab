@@ -1,14 +1,19 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const dbConnect = () => {
-    try{
-        const conn = mongoose.connect(process.env.MONGODB_URL);
-        console.log("Database Connceted Successfully");
-        console.log(conn)
+const connectDB = async () => {
+    try {
+        await mongoose.connect('mongodb+srv://Glamour:123@cluster0.sxnf7qc.mongodb.net/GlamourGrab', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            // Remove deprecated options
+            // useCreateIndex: true,
+            // useFindAndModify: false
+        });
+        console.log('MongoDB Connected...');
+    } catch (error) {
+        console.error(error.message);
+        process.exit(1);
     }
-    catch(error){
-        console.log("Database Error");
-    }
-}
+};
 
-module.exports = dbConnect;
+module.exports = connectDB;
