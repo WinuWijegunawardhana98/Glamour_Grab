@@ -20,7 +20,7 @@ const createFemaleMeasurements = async(req,res) =>{
  
  }
 
- const getAllFemaleMeasurements =async(req,res)=>{
+ const getAllFemaleMeasurements =async(_req,res)=>{
     try {
         const AllFemaleMeasurements = await Female.find();
         res.json(AllFemaleMeasurements)
