@@ -1,0 +1,93 @@
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.app-container {
+    background-image: url('assets/dressing-room.png');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    min-height: 100vh; /* Ensure the container takes at least the height of the viewport */
+    padding: 20px; /* Optional: Add padding around the content */
+}
+/* Container for content */
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of viewport */
+}
+
+/* Content wrapper */
+.content {
+    background-color: rgba(255, 255, 255, 0.8); /* Example: White background with some opacity */
+    padding: 20px; /* Add padding around the content */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+.measurement-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-title {
+    margin-top: 0;
+  }
+  
+  .form-content {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .error {
+    color: red;
+  }
+  

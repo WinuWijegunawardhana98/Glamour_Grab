@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import AuthModal from "./ModelDisplay";
+
+
 
 
 const Header = () => {
@@ -50,7 +51,7 @@ const Header = () => {
           <img src="assets/logo shop.png" alt="header" />
         </div>
         <div className="header__content">
-          <h4>Build Your Body & Mind</h4>
+          <h4>Shop Your Favourites Here</h4>
           <h1 className="section__header">Crush Your Next Fitness Challenge</h1>
           <p>
           Ready to build muscle, lose weight, and feel amazing?** Glowfit offers personalized programs and expert coaching to help you reach your fitness goals.
@@ -72,12 +73,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <AuthModal
-        onClose={() => {
-          setIsAuthModalOpened(false);
-        }}
-        isOpen={isAuthModalOpened}
-      />
+      
     </header>
   );
 };
